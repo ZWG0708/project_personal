@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: '楷体',
+}
+
+html,body,#root,.app{
+    width: 100%;
+    height: 100%;
+}
+
+//home页面
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .home-title{
+        width: 100%;
+        height: 70px;
+        font-size: 24px;
+        line-height: 70px;
+        text-align: center;
+        border-bottom: 1px solid tan;
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px dashed tan;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+    }
+    .home-content{
+        width: 100%;
+        flex: 1;
+        overflow: auto;
+        padding-bottom: 20px;
+        a{  color: #333;
+            display: flex;
+            line-height: 30px;
+            font-size: 18px;
+            padding: 20px;
+            border-bottom: 1px solid rgb(206, 204, 204);
+            justify-content: space-between;
+            .ret{
+                color: gray;
+            }
+        }
+
+    }
+}
+
+//header组件
+.header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: deepskyblue;
+    color: #fff;
+    padding: 0 10px;
+    &.dark{
+        color:deepskyblue;
+        background: #f5f5f5;
+    }
+    .header-span{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+//swiper组件
+.swiper-container {
+    width: 100%;
+    height: 200px;
+    img{
+        width: 100%;
+        display: block;
+    }
+}
+
+//lazy-list组件
+.lazy-list{
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    .lazy-list-item{
+        display: flex;
+        padding: 5px;
+        img{
+            margin-right: 10px;
+        }
+    }
+}
+
+//bscroll组件
+.wrapper{
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    li{
+        line-height: 50px;
+    }
+}
+
+//分页器
+.paging{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    line-height: 20px;
+    .spans{
+        flex: 1;
+        padding: 5px;
+        background: dodgerblue;
+        color:#fff;
+        border-radius: 8px;
+
+    }
+    p{
+        flex: 6;
+        line-height: 30px;
+    }
+}
+
+//table组件
+.table-content{
+    width: 100%;
+    table{
+        width: 100%;
+        border-collapse:collapse;
+        margin-bottom: 20px;
+        tr{
+            width: 100%;
+            line-height: 30px;
+            text-align: center;
+            border-bottom: 1px solid dodgerblue;
+        }
+        button{
+            outline: none;
+            background: #ccc;
+            border: none;
+            border-radius: 5px;
+            padding: 3px 6px;
+            margin: 0 5px;
+        }
+    }
+   
+}
+
+//collect组件
+.collect{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    .collect-header{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background: deepskyblue;
+        color: #fff;
+    }
+    .main{
+        flex: 1;
+        overflow: auto;
+        .item{
+            width: 100%;
+            display: flex;
+            padding: 10px;
+            position: relative;
+            img{
+                margin-right: 10px;
+            }
+            .collect-btn{
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                padding: 5px 8px;
+                outline: none;
+                border: none;
+                background: deepskyblue;
+                color: #fff;   
+                border-radius: 5px;    
+            }
+        }
+    }
+    .footer{
+        width: 100%;
+        height: 50px;
+        background: #eee;
+        padding: 10px;
+        .collect-foot{
+            padding: 5px 8px;
+            float: right;
+            outline: none;
+            border: none;
+            background: deepskyblue;
+            color: #fff;   
+            border-radius: 5px;         
+        }
+    }
+}
+
+//collect详情组件
+.my-collect{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    .collect-header{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: deepskyblue;
+        color: #fff;
+        border-bottom:1px solid #ccc; 
+        span{
+            position: fixed;
+            top: 0;
+            left: 20px;
+        }
+    }
+    .content{
+        flex: 1;
+        padding: 20px;
+        overflow: auto;
+        .item{
+            display: flex;
+            padding: 10px;
+            color: #000;
+            position: relative;
+            img{
+                margin-right: 10px;
+            }
+            .collect-btn{
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                padding: 5px 8px;
+                outline: none;
+                border: none;
+                background: deepskyblue;
+                color: #fff;   
+                border-radius: 5px;    
+            }
+        }
+        .hint{
+            width: 100%;
+            line-height:180px;
+            text-align: center;
+        }
+    }
+}
+
+// tabBar组件
+.tabBar{
+    display: flex;
+    justify-content: space-around;
+    a{
+        color: #000;
+        &.active{
+            color: deepskyblue;
+        }
+    }
+}
+
+// controlled组件
+.controlled{
+    input{
+        margin-left:50px; 
+        width:70%;
+        line-height: 30px;
+        text-indent: 20px;
+        outline: none;
+        border: none;
+        background: #ccc;
+        border-radius: 8px;
+    }
+}
+
+
+//跳转每项组件 公共样式 
+.overall{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    //头部
+    .title-com{
+        width: 100%;
+        height: 70px;
+        font-size: 24px;
+        line-height: 70px;
+        text-align: center;
+        border-bottom: 1px solid tan;
+        .span-com{
+            color: rgb(83, 166, 250);
+        }
+        .home-back{
+            position: fixed;
+            top: 0;
+            left: 15px;
+        }
+    }
+    //相关内容 组件展示
+    .content-com{
+        width: 100%;
+        flex: 1;
+        overflow: auto;
+        padding: 20px;
+        .describe-com{
+            margin-bottom: 25px;
+           .describe{ //做 描述
+               line-height: 40px;
+               color: green;
+           }
+           .describe-two{//做 批注 
+                line-height: 40px;
+                color: red;
+           }
+        }
+    }
+}
+

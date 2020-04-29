@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,body,#root,.app{
+    width: 100%;
+    height: 100%;
+}
+
+//头部
+.header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    h3{
+        flex: 1;
+        text-align: center;
+    }
+    span{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+//home
+.home{
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    .home-content{
+        margin-top: 20px;
+        width: 100%;
+        background: #fff;
+        padding: 10px 20px 0;
+        a{
+            color: rgb(97, 93, 93);
+            line-height: 50px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+    }
+}
+//ship-address
+.ship-address{
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    .ship-content{
+        flex: 1;
+        overflow: auto;
+        .ship-item{
+            width: 100%;
+            // height: 50px;
+            padding:10px 20px;
+            border-bottom: 1px solid #ccc;
+            background: #fff;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            .ads{
+                flex: 1;
+                overflow: hidden;
+                .city{
+                    color: rgb(158, 154, 154);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .edit{
+                // position: absolute;
+                // top: 10px;
+                // right: 10px;
+                width: 40px;
+            }
+        }
+    }
+    .footer{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: rgb(238, 186, 45);
+    }
+}
+
+//amend
+.amend{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .mask{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .mask-com{
+            background: #fff;
+            .com-del{
+                width: 60%;
+                text-align: center;
+                margin: 20px auto;
+                line-height: 25px;
+            }
+            .com-btn{
+                display: flex;
+                height: 40px;
+                border-top: 1px solid #eee;
+                button{
+                    flex: 1;
+                    outline: none;
+                    border:none;
+                    background: #fff;
+                }
+                button:nth-child(1){
+                    border-right: 1px solid #eee;
+                }
+                button:nth-child(2){
+                    color: darkcyan;
+                }
+            }
+        }
+    }
+    .amend-content{
+        .content{
+            padding: 0 20px;
+            border-bottom: 1px solid #ccc;
+            li{
+                width: 100%;
+                line-height: 50px;
+                border-bottom: 1px solid #ccc;
+            }
+            li:nth-child(5){
+                border: none;
+            }
+            label{
+                width: 100px;
+                display: inline-block;
+            }
+            input{
+                outline: none;
+                border: none;
+                width: 70%;
+                // height: 100%;
+                line-height: 34px;
+                font-size: 16px;
+                border-radius: 10px;
+                text-indent: 10px;
+            }
+            span{
+                margin-right: 20px;
+            }
+            .span{
+                width: 20px;
+                height: 20px;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 5px;
+                &.active{
+                    background: rgb(18, 185, 144);
+                }
+            }
+        }
+        .con-btn{
+            padding: 0 20px;
+            margin: 20px 0 40px;
+            li{
+                width: 100%;
+                line-height: 50px;
+            }
+            label{
+                width: 100px;
+                display: inline-block;
+            }
+            span{
+                padding: 3px 10px;
+                border: 1px solid #ccc;
+                margin: 0 10px;
+            }
+        }
+        button{
+            width: 100%;
+            background: rgb(18, 185, 144);
+            outline: none;
+            border:none;
+            line-height: 50px;
+        }
+    }
+}
+
+.loading{
+    width: 100%;
+    line-height: 200px;
+    text-align: center;
+}
